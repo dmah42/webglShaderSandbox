@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title>WebGL Shader Sandbox</title>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+  <script type="text/javascript" src="webgl-utils.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body onload="webGLStart();">
+  <div style="float:left;">
+    <canvas id="webglSphereShader-canvas" style="border: none;" width="512" height="512"></canvas>
+    <br/>
+  </div>
+  <h2>Object</h2>
+  <select id="object-select">
+    <option value="sphere">Sphere</option>
+    <option value="cube">Cube</option>
+  </select>
+
+  <h2>Shader</h2>
+  <select id="shader-select">
+    <option value="per-fragment-phong">Per-fragment phong</option>
+    <option value="per-fragment-lambert">Per-fragment lambert</option>
+    <option value="per-vertex-lambert">Per-vertex lambert</option>
+    <option value="flat-shading">Flat shading</option>
+  </select>
+
+  <h2>Shininess</h2>
+  <input type="text" id="shininess" value="100" />
+
+  <h2>Ambient light</h2>
+  <input type="checkbox" id="ambient_lighting" checked /> Use ambient lighting<br/>
+  <table style="border: 0; padding: 10px;">
+    <tr>
+      <td><b>Colour</b>
+      <td>R: <input type="text" id="ambientR" value="0.3" />
+      <td>G: <input type="text" id="ambientG" value="0.3" />
+      <td>B: <input type="text" id="ambientB" value="0.3" />
+    </tr>
+  </table>
+
+  <h2>Point light</h2>
+  <input type="checkbox" id="point_lighting" checked /> Use point lighting<br/>
+  <table style="border: 0; padding: 10px;">
+    <tr>
+      <td><b>Direction</b>
+      <td>X: <input type="text" id="lightPositionX" value="5.0" />
+      <td>Y: <input type="text" id="lightPositionY" value="6.0" />
+      <td>Z: <input type="text" id="lightPositionZ" value="0.0" />
+    </tr>
+    <tr>
+      <td><b>Colour</b>
+      <td>R: <input type="text" id="positionR" value="0.8" />
+      <td>G: <input type="text" id="positionG" value="0.5" />
+      <td>B: <input type="text" id="positionB" value="0.9" />
+    </tr>
+  </table>
+</body>
+</html>
